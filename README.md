@@ -1,5 +1,6 @@
-# Filip's build of dwm
-- Forked from Luke Smith's Build
+dwm - Dynamic Window Manager
+----------------------------------------
+- Filips' Fork of dwm - Based on Luke Smith's Build
 
 ```bash
 git clone https://github.com/Filpill/dwm.git
