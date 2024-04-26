@@ -167,9 +167,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_q,		spawn,		{.v = (const char*[]){ "sysact", NULL } } },
 	{ MODKEY,			XK_w,		spawn,		{.v = (const char*[]){ BROWSER, NULL } } },
 	{ MODKEY|ShiftMask,	XK_w,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "sudo", "nmtui", NULL } } },
-	{ MODKEY,           XK_e,		spawn,		SHCMD("wallpaper.sh") },
+	{ MODKEY,           XK_e,		spawn,		SHCMD("wallpaper") },
+	{ MODKEY,           XK_s,		spawn,		SHCMD("scriptList") },
 	{ MODKEY,           XK_o,		spawn,		SHCMD("cdFindDirectory") },
-	/*{ MODKEY,           XK_e,		spawn,		{.v = (const char*[]){  TERMINAL, "-e", "wallpaper.sh", NULL  } } },*/
 	/*{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },*/
 	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD(TERMINAL " -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
 	{ MODKEY,			XK_r,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "lfub", NULL } } },
@@ -195,7 +195,7 @@ static const Key keys[] = {
 
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
-	{ MODKEY,			XK_s,		togglesticky,	{0} },
+	/*{ MODKEY,			XK_s,		togglesticky,	{0} },*/
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_d,		spawn,          {.v = (const char*[]){ "dmenu_run", NULL } } },
 	/*{ MODKEY|ShiftMask,		XK_d,		spawn,		{.v = (const char*[]){ "passmenu", NULL } } },*/
