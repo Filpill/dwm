@@ -4,6 +4,7 @@
 #define TERMINAL "st"
 #define TERMCLASS "St"
 #define BROWSER "firefox"
+#define CODEEDITOR "codium"
 
 /* appearance */
 static unsigned int borderpx  = 3;        /* border pixel of windows */
@@ -170,6 +171,7 @@ static const Key keys[] = {
 	{ MODKEY,           XK_e,		spawn,		SHCMD("wallpaper") },
 	{ MODKEY,           XK_s,		spawn,		SHCMD("scriptList") },
 	{ MODKEY,           XK_o,		spawn,		SHCMD("cdFindDirectory") },
+	{ MODKEY,			XK_c,		spawn,		{.v = (const char*[]){ CODEEDITOR , NULL } } },
 	/*{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },*/
 	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD(TERMINAL " -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
 	{ MODKEY,			XK_r,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "lfub", NULL } } },
@@ -218,7 +220,6 @@ static const Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_x,		incrgaps,	{.i = -3 } },
 	/* { MODKEY|ShiftMask,		XK_x,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_c,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "profanity", NULL } } },
 	/* { MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("") }, */
 	/* V is automatically bound above in STACKKEYS */
 	{ MODKEY,			XK_b,		togglebar,	{0} },
