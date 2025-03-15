@@ -22,8 +22,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static int showbar            = 1;              /* 0 means no bar */
 static int topbar             = 1;              /* 0 means bottom bar */
-static const int user_bh      = 20;             /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
-static char *fonts[]          = { "monospace:size=11", "NotoColorEmoji:pixelsize=11:antialias=true:autohint=true"  };
+static const int user_bh      = 22;             /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static char *fonts[]          = { "monospace:size=11.5", "NotoColorEmoji:pixelsize=11.5:antialias=true:autohint=true"  };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
