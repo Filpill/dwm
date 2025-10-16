@@ -1,10 +1,11 @@
 /* See LICENSE file for copyright and license details. */
 
 /* Constants */
-#define TERMINAL "st"
-#define TERMCLASS "St"
+#define TERMINAL "ghostty"
+#define TERMCLASS "com.mitchellh.ghostty"
 #define BROWSER "firefox"
 #define CODEEDITOR "code"
+#define DISCORD "discord"
 
 /* appearance */
 static unsigned int borderpx  = 4;              /* border pixel of windows */
@@ -17,7 +18,7 @@ static int swallowfloating    = 0;              /* 1 means swallow floating wind
 static int smartgaps          = 0;              /* 1 means no outer gap when there is only one window */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;    /* 0: systray in the right corner, >0: systray on left of status text */
-static const unsigned int systrayspacing = 10;   /* systray spacing */
+static const unsigned int systrayspacing = 7;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;        /* 0 means no systray */
 static int showbar            = 1;              /* 0 means no bar */
@@ -58,7 +59,7 @@ static const Rule rules[] = {
 	*/
 	/* class        instance      title       	 tags mask    isfloating   isterminal  noswallow  monitor */
 	{ "Gimp",         NULL,       NULL,       	    1 << 8,       0,           0,         0,        -1 },
-	{ "st-256color",  NULL,       NULL,       	    0,            0,           1,         0,        -1 },
+	{ "com.mitchellh.ghostty",  NULL,       NULL,       	    0,            0,           1,         0,        -1 },
 	{ TERMCLASS,      NULL,       NULL,       	    0,            0,           1,         0,        -1 },
 	{ NULL,           NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
 	{ TERMCLASS,      "floatterm", NULL,       	    0,            1,           1,         0,        -1 },
@@ -176,7 +177,7 @@ static const Key keys[] = {
 	{ MODKEY,           XK_e,		spawn,		SHCMD("wallpaper_menu") },
 	{ MODKEY,           XK_s,		spawn,		SHCMD("script_menu") },
 	{ MODKEY,           XK_o,		spawn,		SHCMD("search_directory") },
-	{ MODKEY,			XK_c,		spawn,		{.v = (const char*[]){ CODEEDITOR , NULL } } },
+	{ MODKEY,			XK_c,		spawn,		{.v = (const char*[]){ DISCORD , NULL } } },
 	/*{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },*/
 	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD(TERMINAL " -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
 	{ MODKEY,			XK_r,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "lfub", NULL } } },
