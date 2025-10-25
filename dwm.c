@@ -627,12 +627,13 @@ buttonpress(XEvent *e)
         }
         else if (ev->x > selmon->ww - (int)TEXTW(stext) + lrpad - getsystraywidth()) {
             click = ClkStatusText;
-        
+
 			char *text = rawstext;
 			int i = -1;
 			char ch;
 			dwmblockssig = 0;
-        
+			x = selmon->ww - (int)TEXTW(stext) + lrpad - getsystraywidth();
+
 			while (text[++i]) {
 				if ((unsigned char)text[i] < ' ') {
 					ch = text[i];
