@@ -176,7 +176,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,	XK_w,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "sudo", "nmtui", NULL } } },
 	{ MODKEY,           XK_e,		spawn,		SHCMD("wallpaper_menu") },
 	{ MODKEY,           XK_s,		spawn,		SHCMD("script_menu") },
-	{ MODKEY,           XK_o,		spawn,		SHCMD("search_directory") },
+	{ MODKEY,           XK_apostrophe,		spawn,		SHCMD("exit_to_tty") },
+  
 	{ MODKEY,			XK_c,		spawn,		{.v = (const char*[]){ DISCORD , NULL } } },
 	/*{ MODKEY,			XK_e,		spawn,		SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },*/
 	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD(TERMINAL " -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook") },
